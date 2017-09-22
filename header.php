@@ -6,7 +6,8 @@
 	<?php  wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+	<!-- Container -->
+	<div class="container-fluid">
 
 <header>
 	<div class="barra-topo">
