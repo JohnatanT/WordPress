@@ -1,7 +1,7 @@
 <?php
 
 
-//Enfileira a folha de estilo
+//Função carregamento dos scripts
 function carrega_scripts(){
 	wp_enqueue_style('template', get_template_directory_uri() . '/css/template.css', array(), '1.0', 'all' );
 	wp_enqueue_script( 'template', get_template_directory_uri(). '/js/template.js', array(), null, true);
@@ -10,3 +10,11 @@ function carrega_scripts(){
 }
 
 add_action('wp_enqueue_scripts','carrega_scripts');
+
+//Função para Menus
+
+register_nav_menus(
+	array(
+		'meu_menu_principal' => 'Menu Principal'
+	)
+);	
