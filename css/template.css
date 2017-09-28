@@ -1,4 +1,4 @@
-.menu-principal ul li{
+.menu-principal ul li, .menu-rodape ul li{
 	display: inline;
 }
 
