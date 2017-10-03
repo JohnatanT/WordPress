@@ -2,26 +2,21 @@
 
 <div class="conteudo">
 	<main>
-		<section class="slide container">
-			Slide
-		</section>
-		<section class="servicos container">
-			Serviços
-		</section>
+		
 		<section class="meio container">
 			<div class="row">
-				<aside class="col-md-3">
-					Barra lateral
-				</aside>
+				
 				<div class="noticias col-md-9">
 					<?php if(have_posts()):
 							while (have_posts()) :
 								the_post();
 							
 					?>
-					<!-- Funciona como um inlude: Primeiro parametro é o arquivo e o segundo a especificação -->
-					<?php get_template_part('content', get_post_format() ); ?>
-
+					<h1><?php the_title(); ?></h1>
+					<p>Publicado em <?php get_the_date(); ?> por <?php the_author(); ?> </p>
+					<p>Categorias <?php the_category(' '); ?> </p>
+					<p><?php the_tags('Tags: ', ', ' ) ?></p>
+					<p><?php the_content(); ?> </p>
 
 					<?php  
 						endwhile;
@@ -36,9 +31,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="mapa container">
-			Mapa
-		</section>
+		
 	</main>
 </div>
 

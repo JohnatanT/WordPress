@@ -12,9 +12,17 @@ function carrega_scripts(){
 add_action('wp_enqueue_scripts','carrega_scripts');
 
 //Função para Menus
-
 register_nav_menus(
 	array(
 		'meu_menu_principal' => 'Menu Principal', 'menu_rodape' => 'Menu Rodape'
 	)
 );	
+
+//Adiciona imagens de fundo
+add_theme_support('custom-background');
+//Adicionando imagem no header
+add_theme_support('custom-header');
+//Adicionando miniaturas nos posts
+add_theme_support('post-thumbnail');
+//Adcionando formando dos posts
+add_theme_support('post-formats', array('video, image'));

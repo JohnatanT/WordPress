@@ -14,24 +14,7 @@
 					Barra lateral
 				</aside>
 				<div class="noticias col-md-9">
-					<?php if(have_posts()):
-							while (have_posts()) :
-								the_post();
-							
-					?>
-					<!-- Funciona como um inlude: Primeiro parametro é o arquivo e o segundo a especificação -->
-					<?php get_template_part('content', get_post_format() ); ?>
-
-
-					<?php  
-						endwhile;
-						else:
-					?>	
-					<p>Não tem nada ainda</p>
-
-					<?php  
-						endif;
-					?>
+					
 
 				</div>
 			</div>
