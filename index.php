@@ -39,6 +39,10 @@
 		<section class="mapa container">
 			Mapa
 		</section>
+		<div class="barra-lateral">
+			<!-- Indentifica o arquivo sidebar-home.php -->
+			<?php get_sidebar('home'); ?>
+		</div>
 	</main>
 </div>
 

@@ -26,3 +26,27 @@ add_theme_support('custom-header');
 add_theme_support('post-thumbnail');
 //Adcionando formando dos posts
 add_theme_support('post-formats', array('video, image'));
+
+//Registrando barra lateral
+if(function_exists('register_sidebar')){
+	register_sidebar(array(
+		'name' => 'Barra lateral 1',
+		'id' => 'sidebar-1',
+		'description' => 'Barra lateral da página home',
+		'before_widget' => '<div class="widget-wrapper>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-titulo>',
+		'after_title' => '</h2>',
+
+	));
+		register_sidebar(array(
+		'name' => 'Barra lateral 2',
+		'id' => 'sidebar-2',
+		'description' => 'Barra lateral da página blog',
+		'before_widget' => '<div class="widget-wrapper>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-titulo>',
+		'after_title' => '</h2>',
+
+	));
+}
